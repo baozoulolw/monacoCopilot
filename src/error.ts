@@ -8,7 +8,7 @@ export class ErrorHandler {
   public handleError(error: unknown, context: ErrorContext): ErrorDetails {
     const errorDetails = this.getErrorDetails(error);
 
-    this.logError(context, errorDetails);
+    //this.logError(context, errorDetails);
 
     return errorDetails;
   }
@@ -68,8 +68,9 @@ export class ErrorHandler {
     return `\n\x1b[1m\x1b[37m[${timestamp}]\x1b[0m \x1b[31m[${context}]\x1b[0m \x1b[2m${githubMessage}\x1b[0m\n${messageBox}\n`;
   }
 
-  private logError(context: ErrorContext, details: ErrorDetails): void {
-    console.error(this.styleMessage(details.message, context));
+  private logError(context: ErrorContext, details: ErrorDetails): any {
+    return {context,details}
+    //console.error(this.styleMessage(details.message, context));
   }
 
   private getTimestamp(): string {

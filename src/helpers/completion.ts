@@ -34,26 +34,6 @@ export const fetchCompletionItem = async ({
   position,
 }: FetchCompletionItemParams): Promise<string | null> => {
   try {
-    // const { completion } = await HTTP.POST<
-    //   CompletionResponse,
-    //   CompletionRequest
-    // >(
-    //   endpoint,
-    //   {
-    //     completionMetadata: constructCompletionMetadata({
-    //       filename,
-    //       position,
-    //       model,
-    //       language,
-    //       technologies,
-    //       externalContext,
-    //     }),
-    //   },
-    //   {
-    //     headers: { "Content-Type": CONTENT_TYPE_JSON },
-    //     error: "Error while fetching completion item",
-    //   }
-    // );
     let completionMetadata = constructCompletionMetadata({
       filename,
       position,

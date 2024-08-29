@@ -10,8 +10,8 @@ import {
 import {Endpoint, ExternalContext, Filename, Technologies} from './copilot';
 import {CursorPosition, EditorModel, EditorRange} from './monaco';
 
-export type CompletionModel = 'llama-3-70b' | 'gpt-4o' | 'gpt-4o-mini';
-export type CompletionProvider = 'openai' | 'groq';
+export type CompletionModel = 'llama-3-70b' | 'gpt-4o' | 'gpt-4o-mini' | 'qwen-turbo';
+export type CompletionProvider = 'openai' | 'groq' | 'ali';
 
 export type CompletionCreateParams = Omit<
   OpenAIChatCompletionCreateParamsBase | GroqChatCompletionCreateParamsBase,
